@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#493526">
+  <meta name="description" content="Conocé Finca El Molino, un espacio de descanso en el paisaje rural de Salta. Consultas y reservas por WhatsApp.">
+  <title>Finca El Molino | Salta</title>
+  <style>
+    :root {
+      --tierra:#8b4d32; --tierra-oscura:#493526; --crema:#f7f1e7;
+      --arena:#dfc8a7; --verde:#536348; --texto:#34291f;
+    }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; font-family:Georgia, "Times New Roman", serif; color:var(--texto); background:var(--crema); }
+    a { color:inherit; }
+    .topbar { position:absolute; z-index:2; top:0; left:0; width:100%; padding:22px 6%; display:flex; justify-content:space-between; align-items:center; color:#fff; }
+    .brand { font-size:clamp(1.15rem,3vw,1.65rem); letter-spacing:.08em; text-transform:uppercase; text-shadow:0 2px 12px #0008; }
+    .nav { display:flex; gap:22px; font:600 .85rem Arial,sans-serif; }
+    .nav a { text-decoration:none; text-shadow:0 2px 10px #000; }
+    .hero { min-height:88vh; display:flex; align-items:flex-end; padding:150px 8% 8%; color:#fff; position:relative; background:linear-gradient(0deg,#1e1a14c9 0%,#1e1a1440 48%,#0002 100%), url("imagenes/portada.jpg") center/cover no-repeat, #75634b; }
+    .hero-copy { max-width:760px; position:relative; z-index:1; }
+    .eyebrow { font:700 .75rem Arial,sans-serif; letter-spacing:.22em; text-transform:uppercase; color:#f0d6b0; }
+    h1 { font-size:clamp(3rem,8vw,6.8rem); line-height:.94; margin:16px 0 20px; font-weight:500; }
+    .hero p { font:1.08rem/1.7 Arial,sans-serif; max-width:570px; margin:0 0 28px; }
+    .btn { display:inline-block; background:var(--tierra); color:#fff; padding:15px 23px; border-radius:3px; text-decoration:none; font:700 .9rem Arial,sans-serif; transition:.2s; }
+    .btn:hover { background:#6f3b27; transform:translateY(-2px); }
+    section { padding:82px 8%; }
+    .intro { text-align:center; max-width:850px; margin:auto; }
+    .kicker { color:var(--tierra); font:700 .75rem Arial,sans-serif; letter-spacing:.2em; text-transform:uppercase; }
+    h2 { font-size:clamp(2.1rem,5vw,3.5rem); font-weight:500; margin:12px 0 20px; color:var(--tierra-oscura); }
+    .intro p, .about-copy p { font:1rem/1.85 Arial,sans-serif; color:#66594d; }
+    .about { display:grid; grid-template-columns:1.05fr .95fr; gap:54px; align-items:center; background:#eee4d5; }
+    .photo { min-height:420px; background:linear-gradient(135deg,#b28b67,#5c6047); background-size:cover; background-position:center; border:10px solid #fff9; box-shadow:0 16px 40px #38271922; }
+    .about-photo { background-image:url("imagenes/fachada.jpg"); }
+    .gallery { background:var(--crema); }
+    .gallery-head { text-align:center; margin-bottom:35px; }
+    .gallery-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; }
+    .gallery-card { min-height:245px; position:relative; overflow:hidden; background:linear-gradient(135deg,#c5a37b,#647052); }
+    .gallery-card img { width:100%; height:100%; min-height:245px; object-fit:cover; display:block; transition:transform .5s; }
+    .gallery-card:hover img { transform:scale(1.04); }
+    .gallery-card .placeholder { position:absolute; inset:0; display:grid; place-items:center; text-align:center; padding:20px; color:#fff; background:linear-gradient(135deg,#76533caa,#34452eaa); font:700 .9rem/1.5 Arial,sans-serif; }
+    .contact { text-align:center; color:#fff; background:var(--tierra-oscura); }
+    .contact h2 { color:#fff; }
+    .contact p { font:1rem/1.8 Arial,sans-serif; color:#e8dccc; max-width:620px; margin:0 auto 26px; }
+    .contact .btn { background:#64734d; margin:6px; }
+    footer { padding:25px 8%; text-align:center; background:#30251d; color:#cdbba7; font: .8rem Arial,sans-serif; }
+    @media(max-width:760px) {
+      .topbar { padding:18px 6%; }
+      .nav { gap:12px; font-size:.72rem; }
+      .hero { min-height:78vh; padding:130px 7% 12%; }
+      section { padding:62px 7%; }
+      .about { grid-template-columns:1fr; gap:28px; }
+      .photo { min-height:300px; }
+      .gallery-grid { grid-template-columns:1fr 1fr; gap:12px; }
+      .gallery-card,.gallery-card img { min-height:175px; }
+    }
+    @media(max-width:430px) {
+      .brand { font-size:1rem; }
+      .nav { gap:9px; }
+      .gallery-grid { grid-template-columns:1fr; }
+      .gallery-card,.gallery-card img { min-height:220px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">Finca El Molino</div>
+    <nav class="nav" aria-label="Navegación principal">
+      <a href="#finca">La finca</a><a href="#galeria">Galería</a><a href="#contacto">Contacto</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <div class="eyebrow">Hachipas · Salta · Argentina</div>
+        <h1>Un lugar para<br>desconectar.</h1>
+        <p>Tradición, tranquilidad y paisaje rural en un rincón de Salta. Conocé Finca El Molino y consultá por tu próxima estadía.</p>
+        <a class="btn" href="#contacto">Consultar disponibilidad</a>
+      </div>
+    </section>
+
+    <section class="about" id="finca">
+      <div class="photo about-photo" role="img" aria-label="Fachada de Finca El Molino"></div>
+      <div class="about-copy">
+        <div class="kicker">La finca</div>
+        <h2>Hospitalidad con esencia norteña</h2>
+        <p>Finca El Molino te invita a disfrutar de un entorno rural, una arquitectura tradicional y espacios para compartir y descansar.</p>
+        <p>Consultanos directamente para conocer la disponibilidad, las tarifas y los detalles de la estadía.</p>
+      </div>
+    </section>
+
+    <section class="gallery" id="galeria">
+      <div class="gallery-head">
+        <div class="kicker">Conocé el lugar</div>
+        <h2>Galería de imágenes</h2>
+      </div>
+      <div class="gallery-grid" id="galeria-grid"></div>
+    </section>
+
+    <section class="contact" id="contacto">
+      <div class="kicker">Estamos para ayudarte</div>
+      <h2>¿Planeás una visita?</h2>
+      <p>Escribinos por WhatsApp para consultar disponibilidad y tarifas. Te responderemos directamente.</p>
+      <a class="btn" href="https://wa.me/5493874538203?text=Hola%2C%20quisiera%20consultar%20disponibilidad%20y%20tarifas%20en%20Finca%20El%20Molino." target="_blank" rel="noopener">WhatsApp 1</a>
+      <a class="btn" href="https://wa.me/5493875350963?text=Hola%2C%20quisiera%20consultar%20disponibilidad%20y%20tarifas%20en%20Finca%20El%20Molino." target="_blank" rel="noopener">WhatsApp 2</a>
+      <p style="margin-top:24px"><a href="https://maps.app.goo.gl/dyFcAAy2Yt7pvUae9" target="_blank" rel="noopener">Ver ubicación en Google Maps ↗</a></p>
+    </section>
+  </main>
+  <footer>Finca El Molino · Salta, Argentina</footer>
+
+  <script>
+    /*
+      ============================================
+      FOTOS DE FINCA EL MOLINO
+      Para cambiar una foto, reemplazá el archivo
+      dentro de la carpeta "imagenes" o cambiá
+      el nombre/ruta aquí abajo.
+      ============================================
+    */
+    const fotos = [
+      { archivo: "imagenes/portada.jpg", texto: "Galería y entorno de la finca" },
+      { archivo: "imagenes/fachada.jpg", texto: "Fachada de la finca" },
+      { archivo: "", texto: "Habitaciones — agregar foto" },
+      { archivo: "", texto: "Cocina y comedor — agregar foto" },
+      { archivo: "", texto: "Baños — agregar foto" },
+      { archivo: "", texto: "Espacios exteriores — agregar foto" }
+    ];
+
+    const contenedor = document.getElementById("galeria-grid");
+    fotos.forEach((foto) => {
+      const tarjeta = document.createElement("div");
+      tarjeta.className = "gallery-card";
+      if (foto.archivo) {
+        const imagen = document.createElement("img");
+        imagen.src = foto.archivo;
+        imagen.alt = foto.texto;
+        imagen.onerror = () => {
+          tarjeta.innerHTML = '<div class="placeholder">Foto pendiente<br><small>' + foto.texto + '</small></div>';
+        };
+        tarjeta.appendChild(imagen);
+      } else {
+        tarjeta.innerHTML = '<div class="placeholder">Espacio para fotografía<br><small>' + foto.texto + '</small></div>';
+      }
+      contenedor.appendChild(tarjeta);
+    });
+  </script>
+</body>
+</html>
